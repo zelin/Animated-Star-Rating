@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    //For bintray and jcenter distribution
+    bintrayRepo = 'maven'
+    bintrayName = 'Animated-Star-Rating'
+
+    publishedGroupId = 'com.neberox.library'
+    libraryName = 'Animated-Star-Rating'
+    artifact = 'animatedstar' //This artifact name should be the same with library module name
+
+    libraryDescription = 'An animated star rating view'
+
+    siteUrl = 'https://github.com/zelin/Animated-Star-Rating'
+    gitUrl  = 'https://github.com/zelin/Animated-Star-Rating'
+
+    libraryVersion = '0.0.2'
+
+    developerId    = 'zelin'
+    developerName  = 'Muhammad Umar'
+    developerEmail = 'ee_umar@yahoo.com'
+    organization   = '' // if you push to organization's repository.
+
+    licenseName = 'The MIT License'  //Example for license
+    licenseUrl  = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+}
+
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
+
+javadoc.doFirst {
+    failOnError false
+}

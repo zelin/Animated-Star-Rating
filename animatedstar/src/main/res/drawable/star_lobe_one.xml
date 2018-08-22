@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) 2018 Muhammad Umar (https://github.com/zelin)
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+  ~ associated documentation files (the "Software"), to deal in the Software without restriction,
+  ~ including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  ~ and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do
+  ~ so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial
+  ~ portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  ~ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  ~ PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  ~ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+  ~ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  ~ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+
+<vector android:height="24dp" android:viewportHeight="500.0"
+        android:viewportWidth="500.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#FF000000"
+          android:name="path"
+          android:pathData="M323.3,141.2c-1.5,2.6 -2.8,5.4 -4.6,7.9c-14.8,20.3 -29.9,40.4 -44.7,60.7c-6.4,8.7 -12.4,17.7 -18.5,26.6c-2.7,4 -6,4.1 -8.7,0.3c-18.3,-25.1 -36.7,-50.3 -55,-75.4c-3.6,-5 -7.5,-9.9 -10.3,-15.3c-1.4,-2.8 -2,-7.5 -0.7,-10.2c21.1,-42.5 42.4,-84.8 64,-127.1c1.1,-2.1 4.3,-4.3 6.5,-4.3c2.2,0 5.3,2.3 6.3,4.4c21.1,41.4 41.9,82.8 62.7,124.3C321.5,135.5 322.1,138.1 323.3,141.2z"/>
+
+</vector>
