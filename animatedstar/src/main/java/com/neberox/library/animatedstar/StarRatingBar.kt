@@ -51,6 +51,10 @@ import kotlin.math.sin
 /**
  * Created by Umar on 20/06/2018.
  */
+
+typealias RatingChangeAction = (Int) -> Unit
+
+
 class StarRatingBar : RelativeLayout {
     private inner class CircularPath {
         var x = 0f
@@ -90,6 +94,8 @@ class StarRatingBar : RelativeLayout {
     private var mTextImgView: ImageView? = null
     private val circularPaths = ArrayList<CircularPath>()
     private var rating = 0
+
+    private var ratingChangeAction: RatingChangeAction? = null
 
     /**
      *
@@ -224,6 +230,16 @@ class StarRatingBar : RelativeLayout {
         return rating
     }
 
+    /**
+    * @param ratingChangeAction Set callback to acquire new rating
+     *
+     */
+    fun setOnRatingChangeListener(
+       ratingChangeAction: RatingChangeAction,
+    ) {
+        this.ratingChangeAction = ratingChangeAction
+    }
+
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         super.onLayout(changed, l, t, r, b)
     }
@@ -261,7 +277,6 @@ class StarRatingBar : RelativeLayout {
                     mImages[i].clearAnimation()
                     mImages[i].alpha = 0f
                 }
-                rating = 0
                 removeView(mTextImgView)
                 val x = e.x
                 val y = e.y
@@ -275,7 +290,10 @@ class StarRatingBar : RelativeLayout {
                         Log.d(TAG, path.value.toString())
                         val position = path.value - 1
                         createAnimation(position)
-                        rating = position
+                        rating = path.value
+                        ratingChangeAction?.let {
+                            it(rating)
+                        }
                         break
                     }
                 }
@@ -459,6 +477,6 @@ class StarRatingBar : RelativeLayout {
     }
 
     companion object {
-        private const val TAG = "DiamondRatingBar"
+        private const val TAG = "StarRatingBar"
     }
 }
