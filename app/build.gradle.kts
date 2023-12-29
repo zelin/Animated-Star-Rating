@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -45,6 +46,21 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.neberox.library"
+            artifactId = "animatedstar"
+            version = "1.0.0-alpha"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+
         }
     }
 }
