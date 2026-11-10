@@ -1,3 +1,5 @@
+
+
 # Animated-Star-Rating
 
 [![Version](https://img.shields.io/badge/Version-0.0.2-brightgreen.svg)](https://github.com/zelin/Animated-Star-Rating)
@@ -11,7 +13,7 @@
 
 The easiest way to add the library to your project is by adding it as a dependency to your build.gradle
 
-```ruby
+```groovy
 dependencies {
    implementation 'com.neberox.library:animatedstar:0.0.2'
 }
